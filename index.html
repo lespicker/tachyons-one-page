@@ -57,16 +57,16 @@
 
   <div class="page-wrap">
     
-  <section id="home" class="relative vh-100 pa4 bg-top cover" style="background-image: url('/images/hero.jpg')">
+  <section id="home" class="relative vh-100 pa4 bg-top cover" style="background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('/images/hero.jpg')">
     <div class="relative pt5 pl5-ns w-60-ns tc">
-      <h1 class="lpfa-serif ma0 dark-red f1 f-subheadline-ns fw9 ttu">Wild Earth</h1>
-      <h2 class="roboto-slab ma0 white f2 f1-ns ttu">Mono<span class="black">chrome</span></h2>
-      <p class="white f4 lh-copy">An exhibition of master photograher Les Picker's black &amp; white wildlife and landscape art.</p>
-      <time class="white lh-solid">Gallery Opening:<br>Saturday June 30th, 2018 3PM until 6PM</time>
-      <p class="lh-solid white">Exhibition runs thru July 27th 2018</p>
-      <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib white" href="#0">Opening RSVP</a>
+      <h1 class="lpfa-serif ma0 dark-red  lh-solid f1 f-subheadline-ns fw9 ttu">W<span class="f2 f1-ns">ild</span> E<span class="f2 f1-ns">arth</span></h1>
+      <h2 class="roboto-slab ma0 silver lh-solid f2 f1-ns ttu">Mono<span class="black">chrome</span></h2>
+      <p class="measure-narrow mid-gray f4 fw4 lh-solid center">An exhibition of master photographer Les Picker's black &amp; white wildlife and landscape fine art prints.</p>
+      <time class="roboto-slab db mt4 mb0 mid-gray f3 fw5 lh-solid">Gallery Opening:<br>Saturday June 30th, 2018<br>3PM until 6PM</time>
+      <a class="dib mv5 roboto-slab f3 fw5 link dim br-pill ba ph3 pv2 mb2 black ttu" href="https://business.facebook.com/events/423125548112965/" target="_blank">Opening RSVP</a>
+      <p class="roboto-slab lh-solid mv0 mid-gray f3 fw5">Exhibition runs thru July 27th 2018</p>
     </div>
-    <a href="#content" class="db absolute z-999 link white pb3 f3 fw5 left-50 ml--40 bottom-1 wow animated pulse infinite">more</a>
+    <a href="#content" class="db absolute z-999 link mid-gray pb3 f4 fw4 left-50 ml--40 bottom-1 wow animated pulse infinite">more</a>
   </section>
   <section id="about" class="bg-black white min-vh-100">
     <article class="cf ph3 ph5-ns pv5 wow animated fadeInUp">
@@ -135,8 +135,9 @@
         <img src="/images/artistsemporium.png" class="db mt4 measure-narrow center mh0-ns">
       </header>
       <div class="fn fl-ns w-50-ns fw3">
-        <p class="lh-copy measure mt4 mt0-ns">Artists’ Emporium was designed to accommodate a bevy of backgrounds and tastes. With such a vast collection of pieces, there are multiple works of art to pique anyone’s interests. For the woman who adores watercolor, she can find prints and originals of paintings composed by some of the gallery’s artists. For the man intrigued by sculpture, he will find pieces of varying materials, synthesized into a new entity. For the young adult in need of a Mother’s Day gift, a great selection of jewelry is offered. </p>
-        <p class="lh-copy measure">For the loyal local, Chesapeake-themed, Harford County centric, and Havre de Grace specific pieces are on view upon entering the gallery. This space is enveloped in distinct art pieces that are bold enough to draw any eye to it or demure enough to elegantly decorate a room. This gallery was created with the hope of appealing to a variety of people and help to bring a time of Renaissance to the town of Havre de Grace.</p>
+        <p class="lh-copy measure mt4 mt0-ns">Artists’ Emporium was designed to accommodate a bevy of backgrounds and tastes. With such a vast collection of pieces, there are multiple works of art to pique anyone’s interests. For the woman who adores watercolor, she can find prints and originals of paintings composed by some of the gallery’s artists. For the man intrigued by sculpture, he will find pieces of varying materials, synthesized into a new entity. A great selection of jewelry is also offered.</p>
+        <p class="lh-copy measure mt4 mt0-ns">For the loyal local, Chesapeake-themed, Harford County centric, and Havre de Grace specific pieces are on view upon entering the gallery. This space is enveloped in distinct art pieces that are bold enough to draw any eye to it or demure enough to elegantly decorate a room. This gallery was created with the hope of appealing to a variety of people and facilitate an artistic  Renaissance for the town of Havre de Grace.</p>
+        <p class="lh-copy measure">We have proudly created a special space within the gallery for noted regional and national artists to exhibit their work. These exhibitions allow our clients to appreciate successful artists' bodies of work in an intimate setting and to invest in that work for their homes and offices.</p>
         <article class="pv3 pv5-ns" data-name="slab-stat-small">
           <h3 class="f6 ttu tracked">Mary</h3>
           <div class="cf">
@@ -170,7 +171,7 @@
     </article>
   </section>
 
-  <footer class="pa4 pa5-l black-70 bt b--black-10">
+  <footer id="footer" class="pa4 pa5-l black-70 bt b--black-10">
     <div class="mb4-l cf">
       <h1 class="fl w-100 pv0 f6 fw6 ttu tracked mb4">Studios</h1>
       <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
@@ -276,43 +277,6 @@
 
   </div>
 
-  <script>
-    $('a[href*="#"]')
-      // Remove links that don't actually link to anything
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function(event) {
-        // On-page links
-        if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-          && 
-          location.hostname == this.hostname
-        ) {
-          // Figure out element to scroll to
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          // Does a scroll target exist?
-          if (target.length) {
-            // Only prevent default if animation is actually gonna happen
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top - $('#top').height()
-            }, 1000, function() {
-              // Callback after animation
-              // Must change focus!
-              var $target = $(target);
-              //$target.focus();
-              if ($target.is(":focus")) { // Checking if the target was focused
-                return false;
-              } else {
-                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                //$target.focus(); // Set focus again
-              };
-            });
-          }
-        }
-      });
-  </script>
 <script>
 jQuery(document).ready(function($){
 	var contentSections = $('.cd-section'),
